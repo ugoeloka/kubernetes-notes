@@ -1,5 +1,5 @@
 
-# Landmark Technologies == Kubernetes Ingress
+# ACADA Learning == Kubernetes Ingress
 # What is the Ingress in kubernetes?
 
 The Ingress is a Kubernetes resource that lets you configure an HTTP load balancer for applications running on Kubernetes, represented by one or more [Services](https://kubernetes.io/docs/concepts/services-networking/service/). Such a load balancer is necessary to deliver those applications to clients outside of the Kubernetes cluster. It also provides SSL Termination and SSL Redirect for HTTPS.
@@ -232,5 +232,5 @@ spec:
 ```
 
 ### Alternatively Deploy Ingress in kubernetes using Manifest Files
-https://github.com/LandmakTechnology/kubernestes-ingress
+https://github.com/devopscalgary/kubernestes-ingress
 ```
