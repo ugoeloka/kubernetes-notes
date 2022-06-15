@@ -180,11 +180,11 @@ spec:
 
 ### Generate self signed certificates
 ```
- openssl req -x509 -nodes -days 365 -newkey rsa:2048 -out mylandmark-ingress-tls.crt -keyout mylandmark-ingress-tls.key -subj "/CN=javawebapp.javawebapp.landmarkfintech.com/O=mylandmark-ingress-tls"
+ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -out oxdit-ingress-tls.crt -keyout oxdit-ingress-tls.key -subj "/CN=javawebapp.javawebapp.oxditfintech.com/O=oxdit-ingress-tls"
 
 # Create secret for with your certificate .key & .crt file
 
- kubectl create secret tls mylandmark-ingress-tls --namespace default --key mylandmark-ingress-tls.key --cert mylandmark-ingress-tls.crt
+ kubectl create secret tls oxdit-ingress-tls --namespace default --key oxdit-ingress-tls.key --cert oxdit-ingress-tls.crt
 ```
 ### Mention tls/ssl(certificate) details in ingress
 ```
@@ -195,11 +195,11 @@ metadata:
 spec:
   tls:
   - hosts:
-    - app.landmarkfintech.com
-    secretName: mylandmarktech-ingress-tls
+    - app.oxditfintech.com
+    secretName: oxdit-ingress-tls
   ingressClassName: nginx
   rules:
-  - host: app.landmarkfintech.com
+  - host: app.oxditfintech.com
     http:
       paths:
       - backend:
@@ -213,8 +213,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: landmarkfintech.com
-    secretName: mylandmarktech-ingress-tls
+  - host: oxditfintech.com
+    secretName: oxdittech-ingress-tls
     http:
       paths:
       # Default Path(/)
